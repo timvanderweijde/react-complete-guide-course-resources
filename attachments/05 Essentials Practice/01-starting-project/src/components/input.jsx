@@ -1,44 +1,25 @@
-import { useState } from "react";
-
-export default function Input() {
-
-  let [investment, setInvestment] = useState([0,0,0,0]);
-
-  function OnChangeInitalInvestment(event) {
-    let currentInvestment = [...investment];
-
-    currentInvestment[0] = event.value;
-
-    setInvestment(currentInvestment);
-  }
-
-  function OnChangeAnnualInvestment(event) {
-    let currentInvestment = [...investment];
-
-    currentInvestment[1] = event.value;
-
-    setInvestment(currentInvestment);
-  }
-
-
+export default function Input({
+  onUpdateInvestment,
+  investmentValue
+}) {
   return (
     <section id="user-input">
       <div className="input-group">
         <p>
           <label>Initial investment:</label>
-          <input value={investment[0]} onChange={(x) => OnChangeInitalInvestment(x)} />
+          <input value={investmentValue.initialInvestment} onChange={(event) => onUpdateInvestment('initialInvestment', event.target.value)} />
         </p>
         <p>
           <label>Annual investment:</label>
-          <input value={investment[1]} onChange={(x) => OnChangeAnnualInvestment(x)} />
+          <input value={investmentValue.annualInvestment} onChange={(event) => onUpdateInvestment('annualInvestment', event.target.value)} />
         </p>
       </div>
       <div className="input-group">
         <p><label>Expected return:</label>
-          <input />
+          <input value={investmentValue.expectedReturn} onChange={(event) => onUpdateInvestment('expectedReturn', event.target.value)}/>
         </p>
         <p> <label>Duration:</label>
-          <input />
+          <input value={investmentValue.duration} onChange={(event) => onUpdateInvestment('duration', event.target.value)}/>
         </p>
       </div>
     </section>
