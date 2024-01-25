@@ -3,19 +3,28 @@ export default function Input() {
     <div>
       <table id="result">
         <thead>
-          <th>Year</th>
-          <th>Investment Value</th>
-          <th>Investment Value</th>
-          <th>Investment Value</th>
-          <th>Investment Value</th>
+          <tr>
+            <th>Year</th>
+            <th>Investment Value</th>
+            <th>Interest (Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <td>sdfsdfs</td>
-            <td>sdfsdfs</td>
-            <td>sdfsdfs</td>
-            <td>sdfsdfs</td>
-            <td>sdfsdfs</td>
+            <td>1</td>
+            <td>$2.2200</td>
+            <td>$60</td>
+            <td>$60</td>
+            <td>$2.200</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>$2.2200</td>
+            <td>$60</td>
+            <td>$60</td>
+            <td>$2.200</td>
           </tr>
         </tbody>
       </table>
